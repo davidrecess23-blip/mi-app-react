@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import TarjetaEnvio from "./TarjetaEnvio";
 
 function App() {
   const [envios, setEnvios] = useState([]);
@@ -13,12 +14,12 @@ function App() {
     <div>
       <h1>Sistema ZIYU</h1>
       {envios.map((envio) => (
-        <div key={envio.id}>
-          <p>Nombre: {envio.name}</p>
-          <p>Phone: {envio.phone}</p>
-          <p>Email: {envio.email}</p>
-          <hr />
-        </div>
+        <TarjetaEnvio
+          key={envio.id}
+          nombre={envio.name}
+          telefono={envio.phone}
+          email={envio.email}
+        />
       ))}
     </div>
   );
