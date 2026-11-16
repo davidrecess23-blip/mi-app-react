@@ -19,6 +19,7 @@ function App() {
           nombre={envio.name}
           telefono={envio.phone}
           email={envio.email}
+          ciudad={envio.address.city}
         />
       ))}
     </div>
